@@ -1,0 +1,23 @@
+<nb-layout>
+    <nb-layout-header fixed>
+     <nb-actions >
+      <nb-action > <button nbButton size="medium" (click)="logout()"  >logout</button></nb-action>
+     </nb-actions>
+      <!-- {{isloggedIn?<nb-action ><button nbButton size="medium"  (click)="login()" >Login</button> </nb-action>    
+      <nb-action ><button nbButton size="medium" (click)="register()"  >Register</button></nb-action> 
+   :  <nb-action ><button nbButton size="medium" (click)="logout()"  >logout</button></nb-action> }}
+      </nb-actions> -->
+    </nb-layout-header>
+  
+    <nb-layout-column>
+  
+      <router-outlet></router-outlet>
+      <p>Hi People!</p>
+      
+    </nb-layout-column>
+  
+    <nb-layout-footer fixed>
+    </nb-layout-footer>
+  
+  </nb-layout>
+

@@ -1,0 +1,15 @@
+<nb-card>
+    
+    <nb-card-body class="example-items-rows">
+        <h1>{{title}}</h1>
+    <form #loginForm='ngForm'  (ngSubmit)="onLogin(loginForm)">
+     
+      <input type="email" nbInput placeholder="Enter Email" ngModel name="username" required >
+      <br><br>
+      <input type="password" nbInput placeholder="Enter Password" ngModel name="password" required >
+      <br><br>
+      <button type="submit"  [disabled]="!loginForm.valid" nbButton status="primary">{{title}}</button>
+      </form>
+      <a routerLink="/register">New User</a>
+    </nb-card-body>
+</nb-card>

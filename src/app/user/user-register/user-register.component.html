@@ -1,0 +1,19 @@
+<nb-card> 
+    <nb-card-body class="example-items-rows">
+        <h1>{{title}}</h1>
+    <form   #registerForm='ngForm'  (ngSubmit)="getUserData(registerForm)"  >
+      <input type="text" nbInput placeholder="Enter Full Name" ngModel name="name" class="form-control" required  >
+      <br><br>
+      <input type="email" nbInput placeholder="Enter Email" ngModel  name="email">
+      <br><br>
+      <input type="password" nbInput placeholder="Enter Password" ngModel name="password">
+      <br><br>
+      <nb-radio-group ngModel name="gender">
+        <nb-radio value="male">Male</nb-radio>
+        <nb-radio value="female">Female</nb-radio>
+      </nb-radio-group>
+      <button type="submit" [disabled]="!registerForm.valid" nbButton status="primary">{{title}}</button>
+    </form>
+    <a routerLink="/">Login</a>
+    </nb-card-body>
+</nb-card>
